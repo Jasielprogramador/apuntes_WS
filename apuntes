@@ -1,0 +1,82 @@
+Respuestas:
+200-->OK
+302 --> Lo he encontrado pero lo que buscas esta redireccionado en otra pagina
+400-->Bad request
+404-->Not found 
+
+Goiburuak bezeroaren eskaerak eta lehentasunak adierazten dute
+
+host-aren balioa alias-aren berdina izango da
+
+Accept:
+	text/html --> Horrela bueltatzeko
+
+Accept-encoding:
+	gzip --> Ahal baduzu eman ezazu baliabidea konprimatuta
+	indentity --> gzip moduan ezin bada bueltatu itzuli dagoen bezala
+	identity;q=0.5 --> Lehentasun gutxiago
+
+Bi gauza hauek existitzen badira kondizioak bete ez arren zerbitzariak duena itzuliko du:
+1.Baliabidea existitzen ote den.
+2.Eskatutako ekintza baliabideari aplikatu ahal zaion
+
+HTTP erantzunak:
+	Date --> Noiz egin duzun HTTP eskaera
+	Last-Modified --> Noiz modifikatu zen azken aldiz baliabidea, esto 
+	te sirve por si vuelves a pedir el mismo baliabide ya que lo vas a 
+	tener guardado en la cache
+	Content-lenght --> Te dice la luzeera de la respuesta HTTP
+	Content-type --> Te dice el tipo del contenido que puede ser 
+	text/html, application/pdf...
+	
+
+
+JSON:
+{'izena':'oskar','abizena':'casquero'}
+
+XML:
+<pertsona>
+	<izena>oskar</izena>
+	<abizena>casquero</abizena>
+<pertsona>
+XML batek klase bat zein atributu dituen jakiteko schema bat dauka esleituta 
+
+INPRIMAKI:
+ izena=oskar&abizena=casquero
+
+Irudien kasuan bi mota daude:
+	datuak formatu binarioan edo JSON eta XML bidez pasatzen dira
+
+
+
+
+Datuak bidaltzeko POST:
+-Datuak edukian
+-Zerbitzaria jakiteko datuak zein hizkuntzan idatzita dauden CONTENT-TYPE-a irakurri behar dugu, honekin batera CONTENT-LENGHT izan behar dugu datuak noiz amaitzen diren
+	json->Content-type:application/json
+	xml->Content-type:application/xml
+
+
+Datuak bidaltzeko GET:
+-Edukia hutsik datuak urian
+-Hala ere datuak bebai GET erabilita bidali daitezke eta hemen ez dugu CONTENT-TYPE eta CONTENT-LENGHT izan behar query-a String moduan inprimaki formatudun datuak bakarrik bidali daitezke.
+-Honekin batera HTTP eskeraren egiturak querystring-a mugatzendu: izen-baliobikoteenkatea“?” karaktereareneta “HTTP/1.1” katearentarteankokatzenda.
+-Beste aldetik GET bidezko datu bidalketa mugatuta dago
+-Honekin batera URI-a bidaltzen duzunez segurtasuna oso kaskarra da
+Datuak zuriune batean amaitzen direnez ez dugu CONTENT_TYPE behar
+Datuak bidaltzeko aukera bakarra dugunez ez dugu CONTENT-TYPE behar
+
+
+
+HAU INPRIMAKI-AREN ADIBIDE ESPEZIFIKOA DA:
+Adibidea:
+Aldagai1 -> & ->UTF-8=26
+Aldagai2 -> á ->UTF-8=C3 A1
+
+
+Aldagai1 -> & ->%26 -> 3 karaktere: %,2,6
+Aldagai2 -> á ->%C3 %A1 -> 6 karaktere: %,C,3,%,A,1
+
+izena=I%C3%B1aki&abizena=P%C3%A9
+
+izena_abizena=I%C3%B1aki+P%C3%A9
