@@ -83,3 +83,13 @@ izena_abizena=I%C3%B1aki+P%C3%A9
 
 
 Hala ere datuak bidaltzerakoan IMPRIMAKI zein GET zein POST-en kasuan zerbitzariak jakin egin behar du zein diren atributuak
+
+
+Testua konpresiorako erantzun ona aurkezten du
+
+HTTP protokoloa gorputza konprimatzeko aukera ematen du erabiliena gzip
+
+Accept-Encoding:gzip -> Honekin BEZEROA erantzunaren edukia ahal bada konprimituta nahi duela adierazten du bestela identity(original) bezala 
+Content-Encoding:gzip -> Honekin Zerbitzaria baliabidea konprimituta emango duela adierazten du
+
+
