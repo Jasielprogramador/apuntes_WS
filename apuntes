@@ -93,3 +93,20 @@ Accept-Encoding:gzip -> Honekin BEZEROA erantzunaren edukia ahal bada konprimitu
 Content-Encoding:gzip -> Honekin Zerbitzaria baliabidea konprimituta emango duela adierazten du
 
 
+nabigatzaileak html-an dauden irudi, fitxategi edo beste baliabideak deskargatu egiten ditu http eskaera baten bidez 
+
+Irudia dela adierazteko:
+Content-type:image/jpg
+
+Cache-control bidez zerbitzariak nabigatzaileari esaten dio web orrialde hau berdin geratuko da beste data baten arte orduan bezeroa berriz web orria 0tik kargatu arren, web orria cache-tik kargatzen du.
+
+Irudia adibidez aldatu ez bada eta web orriaren data jada pasatu egin bada nabigatzaileak berriz http eskaera bat egiten du eta eskaera honetan honakoa jartzen du:
+
+If-Modified-Since: (Last-Modified goiburuan jartzen duen data jartzen da)
+
+Ondorioz web orriaren elementu bakoitzarentzat cachearen tratamendu bat egiten da
+
+
+
+
+
