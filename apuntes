@@ -108,6 +108,12 @@ Ondorioz web orriaren elementu bakoitzarentzat cachearen tratamendu bat egiten d
 
 Balibidea aldatu ez bada zerbitzariak 304 Not Modified mezua erantzun egiten du, aldiz aldatu egin bada 200 OK jarri egiten da 
 
+dug
+CACHE ARIKETA
+1.kasuan nabigatzailea 200 OK erantzuna jaso egiten du, izan ere, nabigatzailea baliabidea kargatzen duen lehenengo aldia denez zerbitzariak baliabidea bidali egiten dio nabigatzaileari,
+aldiz, 2.kasuan bezeroa jada bere cachean baliabidea kargatuta du, ondorioz 302 Not Modified bidaltzen dio zerbitzariak nabigatzaileari esateko bere cachetik baliabidea karga
+dezan izan ere baliabidea ez da aldatu
+
 
 
 
