@@ -61,6 +61,7 @@ Datuak bidaltzeko GET:
 -Edukia hutsik datuak urian
 -Hala ere datuak bebai GET erabilita bidali daitezke eta hemen ez dugu CONTENT-TYPE eta CONTENT-LENGHT izan behar query-a String moduan inprimaki formatudun datuak bakarrik bidali daitezke.
 -Honekin batera HTTP eskeraren egiturak querystring-a mugatzen du: izen-balio bikoteen katea “?” karakterearen eta “HTTP/1.1” katearen tartean kokatzen da.
+-Detras del ? es lo que el bezero le pasa al navegador
 -Beste aldetik GET bidezko datu bidalketa mugatuta dago
 -Honekin batera URI-a bidaltzen duzunez segurtasuna oso kaskarra da
 Datuak zuriune batean amaitzen direnez ez dugu CONTENT_TYPE behar
