@@ -104,7 +104,9 @@ Irudia adibidez aldatu ez bada eta web orriaren data jada pasatu egin bada nabig
 
 If-Modified-Since: (Last-Modified goiburuan jartzen duen data jartzen da)
 
-Ondorioz web orriaren elementu bakoitzarentzat cachearen tratamendu bat egiten da
+Ondorioz web orriaren elementu bakoitzarentzat cachearen tratamendu bat egiten data 
+
+Balibidea aldatu ez bada zerbitzariak 304 Not Modified mezua erantzun egiten du, aldiz aldatu egin bada 200 OK jarri egiten da 
 
 
 
