@@ -114,6 +114,33 @@ CACHE ARIKETA
 aldiz, 2.kasuan bezeroa jada bere cachean baliabidea kargatuta du, ondorioz 302 Not Modified bidaltzen dio zerbitzariak nabigatzaileari esateko bere cachetik baliabidea karga
 dezan izan ere baliabidea ez da aldatu eta ondorioz zerbitzariak ez dio baliabidea berriz bidaltzen
 
+HTML ARIKETA
+<html>
+
+	<head>
+		<title>Titulua</title>
+
+	</head>
+
+	<body>
+
+		<ul id="zerrenda">
+			<li>Server Date:aaaa</li>
+		</ul>
+
+		<br/> 	<!-- new line bat da da -->
+
+		<script language="javascript">
+			var data = new Date();
+			var li_element = document.createElement("li");
+			var text_element = document.createTextNode("Client Date: " + data);
+			li_element.appendChild(text_element);
+			document.getElementById("zerrenda").appendChild(li_element);
+		</script>
+
+	</body>
+
+</html>
 
 
 
